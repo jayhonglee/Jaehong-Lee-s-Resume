@@ -1,0 +1,166 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+% \usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItemUpdated}[1]{
+  \item\small{
+    {#1 \vspace{-7pt}}
+  }
+}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textbf{{\small\textit{#3}}} & {\small \textit{#4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubheading}[3]{
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} • {\textit{#2}} & #3 \\
+      % \textbf{{\small\textit{#3}}} & {\small \textit{#4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt]}
+% \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\vspace{4pt}\huge Jaehong Lee (Jay)} & \textbf{Email} : \href{mailto:sourabh@sourabhbajaj.com}{contact@jaehonglee.com}\\
+  \href{http://jaehonglee.com/}{jaehonglee.com} {•} \href{http://github.com/jayhonglee/}{github.com/jayhonglee} {•} \href{http://linkedin.com/in/jayhonglee/}{linkedin.com/in/jayhonglee} &\textbf{Phone} : Provided upon request \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  % \resumeSubHeadingListStart
+    \resumeSubheading
+      {Simon Fraser University}{Burnaby, BC}
+      {Bachelor of Applied Science in Computer Engineering, Co-op (BASc)}{Sep. 2019 -- Present}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {\textbf{Coursework}: computational optimization, statistical inference, probability theory, data analysis, algorithms, data structures, OOP, database systems, operating systems, software engineering, and multi-threading.}
+      \resumeItemListEnd
+  % \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+
+    \resumeSubheading
+      {Intersystem Controls, Inc.}{Vancouver, BC}
+      {Software Engineering Intern -- Frontend}{Sep. 2021 - Dec. 2021}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {Led design and development of an advanced smart touch panel interface for a residential project at a prestigious Vancouver hotel. \href{}{Image}}
+        \resumeItemUpdated
+          {Created software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}, planning the development of dynamic and user-friendly interfaces while effectively managing application state for an optimized user experience.}
+        \resumeItemUpdated
+          {Implemented \textbf{REST API} integration using \textbf{Postman} establishing communication with the backend systems.}
+        \resumeItemUpdated
+          {Conducted comprehensive unit testing using \textbf{Jest} to ensure modularization and robustness of components.}
+        \resumeItemUpdated
+          {Developed a configurable module, reducing manual input by \textbf{80\%}, establishing scalable architecture for future projects.}
+        \resumeItemUpdated
+          {Collaborated closely with a UX/UI designer to optimize user functionality and plan the interface design, ensuring seamless integration of user experience principles into the smart touch panel interface.}
+        \resumeItemUpdated
+          {Participated in intern interviews, evaluating candidates, contributing to the team's growth and  transition planning.}
+      \resumeItemListEnd
+
+%-----------PROJECTS-----------------
+\section{Technical Projects}
+ \projectSubheading
+      {Grab Pencil}{Solo Project}{Sep. 2021}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {Led design and development of an advanced smart touch panel interface for a residential project at a prestigious Vancouver hotel.}
+        \resumeItemUpdated
+          {Designed and implemented software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}, planning the development of dynamic and user-friendly interfaces while effectively managing application state for an optimized user experience.}
+        \resumeItemUpdated
+          {Conducted comprehensive unit testing using \textbf{Jest} and built a configurable module, reducing manual input by \textbf{80\%} and establishing a scalable architecture for seamless future project expansions and enhancements.}
+        \resumeItemUpdated
+          {Collaborated closely with a UX/UI designer to optimize user functionality and plan the interface design, ensuring seamless integration of user experience principles into the smart touch panel interface.}
+        \resumeItemUpdated
+          {Coordinated \textbf{REST API} integration establishing communication between frontend and backend systems.}
+        \resumeItemUpdated
+          {Assisted in the interviewing process for incoming interns, evaluating candidates, contributing to the team's growth and smooth transition planning.}
+      \resumeItemListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ % \resumeSubHeadingListStart
+   % \item{
+     \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+     \hfill
+     \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+   % }
+ % \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
