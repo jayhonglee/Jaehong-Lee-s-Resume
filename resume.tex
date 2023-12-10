@@ -68,7 +68,15 @@
 \newcommand{\projectSubheading}[3]{
   \vspace{-1pt}
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} • {\textit{#2}} & #3 \\
+      \textbf{#1} -- {\textit{#2}} & #3 \\
+      % \textbf{{\small\textit{#3}}} & {\small \textit{#4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubheadingUpdated}[1]{
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
       % \textbf{{\small\textit{#3}}} & {\small \textit{#4}} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -90,7 +98,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\vspace{4pt}\huge Jaehong Lee (Jay)} & \textbf{Email} : \href{mailto:sourabh@sourabhbajaj.com}{contact@jaehonglee.com}\\
+  \textbf{\vspace{4pt}\huge Jaehong Lee (Jay)} & \textbf{Email} : \href{mailto:contact@jaehonglee.com}{contact@jaehonglee.com}\\
   \href{http://jaehonglee.com/}{jaehonglee.com} {•} \href{http://github.com/jayhonglee/}{github.com/jayhonglee} {•} \href{http://linkedin.com/in/jayhonglee/}{linkedin.com/in/jayhonglee} &\textbf{Phone} : Provided upon request \\
 \end{tabular*}
 
@@ -100,7 +108,7 @@
   % \resumeSubHeadingListStart
     \resumeSubheading
       {Simon Fraser University}{Burnaby, BC}
-      {Bachelor of Applied Science in Computer Engineering, Co-op (BASc)}{Sep. 2019 -- Present}
+      {Bachelor of Applied Science in Computer Engineering, Co-op (BASc)}{Sep. 2019 -- Aug. 2025}
       \resumeItemListStart
         \resumeItemUpdated
           {\textbf{Coursework}: computational optimization, statistical inference, probability theory, data analysis, algorithms, data structures, OOP, database systems, operating systems, software engineering, and multi-threading.}
@@ -116,7 +124,7 @@
       {Software Engineering Intern -- Frontend}{Sep. 2021 - Dec. 2021}
       \resumeItemListStart
         \resumeItemUpdated
-          {Led design and development of an advanced smart touch panel interface for a residential project at a prestigious Vancouver hotel. \href{}{Image}}
+          {Led the design and development of a smart touch panel interface for a residential project at a Vancouver hotel. \href{https://github.com/jayhonglee/Jaehong-Lee-s-Resume/blob/main/img/Calista_UI1.jpg?raw=true}{\textbf{[Image]}}}
         \resumeItemUpdated
           {Created software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}, planning the development of dynamic and user-friendly interfaces while effectively managing application state for an optimized user experience.}
         \resumeItemUpdated
@@ -132,34 +140,77 @@
       \resumeItemListEnd
 
 %-----------PROJECTS-----------------
-\section{Technical Projects}
+\section{Selected Projects}
  \projectSubheading
-      {Grab Pencil}{Solo Project}{Sep. 2021}
+      {\href{https://grabpencil.com/}{GrabPencil.com}}{Solo Project}{\textit{\small Sep. 2023 -- Present}}
       \resumeItemListStart
         \resumeItemUpdated
-          {Led design and development of an advanced smart touch panel interface for a residential project at a prestigious Vancouver hotel.}
+          {Created a tutoring platform for university students using \textbf{React}, \textbf{Node.js}, \textbf{Express.js}, \textbf{MongoDB}, and \textbf{Mongoose}.}
         \resumeItemUpdated
-          {Designed and implemented software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}, planning the development of dynamic and user-friendly interfaces while effectively managing application state for an optimized user experience.}
+          {Developed \textbf{Node.js}-based backend \textbf{REST API} enabling CRUD operations for tutoring job postings.}
         \resumeItemUpdated
-          {Conducted comprehensive unit testing using \textbf{Jest} and built a configurable module, reducing manual input by \textbf{80\%} and establishing a scalable architecture for seamless future project expansions and enhancements.}
+          {Implemented user authentication, encompassing password hashing and \textbf{JWT}-based authentication with cookie storage.}
         \resumeItemUpdated
-          {Collaborated closely with a UX/UI designer to optimize user functionality and plan the interface design, ensuring seamless integration of user experience principles into the smart touch panel interface.}
+          {Used \textbf{Socket.io} for real-time communication, storing chat history in \textbf{MongoDB}.}
         \resumeItemUpdated
-          {Coordinated \textbf{REST API} integration establishing communication between frontend and backend systems.}
+          {Incorporated \textbf{Bootstrap} for streamlined and responsive frontend design.}
         \resumeItemUpdated
-          {Assisted in the interviewing process for incoming interns, evaluating candidates, contributing to the team's growth and smooth transition planning.}
+          {Conducted backend API endpoint testing using \textbf{Jest} and \textbf{Supertest} for comprehensive validation and reliability.}
       \resumeItemListEnd
+      
+ \vspace{6pt}\projectSubheading
+      {\href{https://github.com/jayhonglee/Hardware-Aware-Software-Optimization}{Hardware-Aware Software Optimization}}{Pair Academic Term Project}{\textit{\small Jul. 2023}}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {Optimized the General Matrix Multiply algorithm on a 10-core X86 CPU using \textbf{C}.}
+        \resumeItemUpdated
+          {Employed data tiling optimization with a tile size of 16, achieving a speedup of \textbf{88.14\%}.}
+        \resumeItemUpdated
+          {Implemented X86 SIMD intrinsics for vectorization with data tiling, resulting in a \textbf{98.39\%} speedup.}
+        \resumeItemUpdated
+          {Applied OpenMP multithreading for parallelization, with data tiling and vectorization, achieving a \textbf{99.81\%} speedup.}
+        \resumeItemUpdated
+          {Integrated loop unrolling with the three optimizations, resulting in a \textbf{99.84\%} speedup (\textbf{8 minutes} to \textbf{0.73 seconds}).}
+      \resumeItemListEnd
+      
+ \vspace{6pt}\projectSubheading
+      {\href{https://github.com/jayhonglee/mazeGame}{Maze Game}}{Team Academic Term Project}{\textit{\small Apr. 2023}}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {Developed a \textbf{Java} game app with \textbf{Maven} for project management, using \textbf{OOP} principles for robust and scalable code.}
+        \resumeItemUpdated
+          {Implemented pathfinding algorithm for enemy movement optimization.}
+        \resumeItemUpdated
+          {Utilized Scrum process model for efficient project management and iterative development.}
+        \resumeItemUpdated
+          {Employed \textbf{JUnit} for unit testing and conducted line and branch coverage testing to validate code effectiveness.}
+      \resumeItemListEnd
+      
 
 %
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- % \resumeSubHeadingListStart
-   % \item{
-     \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-     \hfill
-     \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-   % }
- % \resumeSubHeadingListEnd
+\section{Certificates}
+ \projectSubheadingUpdated
+      {Udemy Online Courses}
+      \resumeItemListStart
+        \resumeItemUpdated
+          {\textbf{\href{https://www.udemy.com/course/understand-javascript/}{JavaScript: Understanding the Weird Parts}} \hfill \textit{Dec. 2023}}
+        \resumeItemUpdated
+          {\textbf{\href{https://www.udemy.com/course/the-complete-nodejs-developer-course-2/}{The Complete Node.js Developer Course (3rd Edition)}} \hfill \textit{Feb. 2023}}
+        \resumeItemUpdated
+          {\textbf{\href{https://www.udemy.com/course/the-complete-javascript-course/}{The Complete JavaScript Course 2024: From Zero to Expert!}} \hfill \textit{May 2021}}
+       \resumeItemListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+   \resumeItemListStart
+        \resumeItemUpdated
+          {\textbf{Languages}{: HTML, CSS, JavaScript, C, C++, Java, SQL, MATLAB, VHDL, \LaTeX }}
+        \resumeItemUpdated
+          {\textbf{Frameworks and Libraries}{: Node.js, React.js, Redux, Express.js, Mongoose, Bootstrap, Jest, JUnit }}
+        \resumeItemUpdated
+          {\textbf{Technologies and Tools}{: Git, Unix/Linux, MongoDB, NoSQL, Bash, Heroku}}
+   \resumeItemListEnd
 
 
 %-------------------------------------------
