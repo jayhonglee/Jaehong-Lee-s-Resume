@@ -17,6 +17,31 @@
 % \usepackage[pdftex]{hyperref}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[left=0.9in,top=1in,bottom=1in,right=1.1in]{geometry}
+
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
 
 
 \pagestyle{fancy}
@@ -99,7 +124,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\vspace{4pt}\huge Jaehong Lee (Jay)} & \textbf{Email} : \href{mailto:contact@jaehonglee.com}{contact@jaehonglee.com}\\
-  \href{http://jaehonglee.com/}{jaehonglee.com} {•} \href{http://github.com/jayhonglee/}{github.com/jayhonglee} {•} \href{http://linkedin.com/in/jayhonglee/}{linkedin.com/in/jayhonglee} &\textbf{Phone} : Provided upon request \\
+  \href{http://jaehonglee.com/}{jaehonglee.com \ExternalLink} {•} \href{http://github.com/jayhonglee/}{github.com/jayhonglee \ExternalLink} {•} \href{http://linkedin.com/in/jayhonglee/}{linkedin.com/in/jayhonglee \ExternalLink} &\textbf{Phone} : +1 (778) 984-5613 \\
 \end{tabular*}
 
 
@@ -126,7 +151,9 @@
         \resumeItemUpdated
           {Led the design and development of a smart touch panel interface for a residential project at a Vancouver hotel. \href{https://github.com/jayhonglee/Jaehong-Lee-s-Resume/blob/main/img/Calista_UI1.jpg?raw=true}{\textbf{[Image]}}}
         \resumeItemUpdated
-          {Created software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}, planning the development of dynamic and user-friendly interfaces while effectively managing application state for an optimized user experience.}
+          {Created software solutions utilizing \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{React}, and \textbf{Redux}.}
+        \resumeItemUpdated
+          {Planned dynamic, user-friendly interfaces, managing app state for optimized user experience.}
         \resumeItemUpdated
           {Implemented \textbf{REST API} integration using \textbf{Postman} establishing communication with the backend systems.}
         \resumeItemUpdated
@@ -142,16 +169,18 @@
 %-----------PROJECTS-----------------
 \section{Selected Projects}
  \projectSubheading
-      {\href{https://grabpencil.com/}{GrabPencil.com}}{Solo Project}{\textit{\small Sep. 2023 -- Present}}
+      {\href{https://grabpencil.com/}{GrabPencil.com \ExternalLink}}{Solo Project}{\textit{\small Sep. 2023 -- Present}}
       \resumeItemListStart
         \resumeItemUpdated
           {Created a tutoring platform for university students using \textbf{React}, \textbf{Node.js}, \textbf{Express.js}, \textbf{MongoDB}, and \textbf{Mongoose}.}
         \resumeItemUpdated
-          {Developed \textbf{Node.js}-based backend \textbf{REST API} enabling CRUD operations for tutoring job postings.}
+          {Developed a database search feature with comprehensive filters for easier tutor finding experience.}
+        \resumeItemUpdated
+          {Created \textbf{Node.js}-based backend \textbf{REST API} enabling CRUD operations for tutoring job postings.}
         \resumeItemUpdated
           {Implemented user authentication, encompassing password hashing and \textbf{JWT}-based authentication with cookie storage.}
         \resumeItemUpdated
-          {Used \textbf{Socket.io} for real-time communication, storing chat history in \textbf{MongoDB}.}
+          {Utilized \textbf{Socket.io} for real-time communication, including online user tracking, and stored chat history in \textbf{MongoDB}.}
         \resumeItemUpdated
           {Incorporated \textbf{Bootstrap} for streamlined and responsive frontend design.}
         \resumeItemUpdated
@@ -159,22 +188,22 @@
       \resumeItemListEnd
       
  \vspace{6pt}\projectSubheading
-      {\href{https://github.com/jayhonglee/Hardware-Aware-Software-Optimization}{Hardware-Aware Software Optimization}}{Pair Academic Term Project}{\textit{\small Jul. 2023}}
+      {\href{https://github.com/jayhonglee/Hardware-Aware-Software-Optimization}{Hardware-Aware Software Optimization \ExternalLink}}{Pair Academic Term Project}{\textit{\small Jul. 2023}}
       \resumeItemListStart
         \resumeItemUpdated
-          {Optimized the General Matrix Multiply algorithm on a 10-core X86 CPU using \textbf{C}.}
+          {Optimized the General Matrix Multiply algorithm on a 10-core X86 CPU using \textbf{C} for increased efficiency.}
         \resumeItemUpdated
-          {Employed data tiling optimization with a tile size of 16, achieving a speedup of \textbf{88.14\%}.}
+          {Employed data tiling optimization with a tile size of 16, achieving a speedup of \textbf{8.56x}.}
         \resumeItemUpdated
-          {Implemented X86 SIMD intrinsics for vectorization with data tiling, resulting in a \textbf{98.39\%} speedup.}
+          {Implemented X86 SIMD intrinsics for vectorization with data tiling, resulting in a \textbf{61.94x} speedup.}
         \resumeItemUpdated
-          {Applied OpenMP multithreading for parallelization, with data tiling and vectorization, achieving a \textbf{99.81\%} speedup.}
+          {Applied OpenMP multithreading for parallelization, with data tiling and vectorization, achieving a \textbf{515.35x} speedup.}
         \resumeItemUpdated
-          {Integrated loop unrolling with the three optimizations, resulting in a \textbf{99.84\%} speedup (\textbf{8 minutes} to \textbf{0.73 seconds}).}
+          {Integrated loop unrolling with the three optimizations, resulting in a \textbf{649.53x} speedup (\textbf{8 minutes} to \textbf{0.739 seconds}).}
       \resumeItemListEnd
       
  \vspace{6pt}\projectSubheading
-      {\href{https://github.com/jayhonglee/mazeGame}{Maze Game}}{Team Academic Term Project}{\textit{\small Apr. 2023}}
+      {\href{https://github.com/jayhonglee/mazeGame}{Maze Game \ExternalLink}}{Team Academic Term Project}{\textit{\small Apr. 2023}}
       \resumeItemListStart
         \resumeItemUpdated
           {Developed a \textbf{Java} game app with \textbf{Maven} for project management, using \textbf{OOP} principles for robust and scalable code.}
@@ -194,11 +223,13 @@
       {Udemy Online Courses}
       \resumeItemListStart
         \resumeItemUpdated
-          {\textbf{\href{https://www.udemy.com/course/understand-javascript/}{JavaScript: Understanding the Weird Parts}} \hfill \textit{Dec. 2023}}
+          {\textbf{\href{https://www.udemy.com/course/understand-javascript/}{JavaScript: Understanding the Weird Parts \ExternalLink}} \hfill \textit{Dec. 2023}}
         \resumeItemUpdated
-          {\textbf{\href{https://www.udemy.com/course/the-complete-nodejs-developer-course-2/}{The Complete Node.js Developer Course (3rd Edition)}} \hfill \textit{Feb. 2023}}
+          {\textbf{\href{https://www.udemy.com/course/the-complete-nodejs-developer-course-2/}{The Complete Node.js Developer Course (3rd Edition) \ExternalLink}} \hfill \textit{Feb. 2023}}
         \resumeItemUpdated
-          {\textbf{\href{https://www.udemy.com/course/the-complete-javascript-course/}{The Complete JavaScript Course 2024: From Zero to Expert!}} \hfill \textit{May 2021}}
+          {\textbf{\href{https://www.udemy.com/course/the-complete-javascript-course/}{The Complete JavaScript Course 2024: From Zero to Expert! \ExternalLink}} \hfill \textit{May 2021}}
+        \resumeItemUpdated
+          {\textbf{\href{https://www.udemy.com/course/modern-html-css-from-the-beginning/}{Modern HTML \& CSS From The Beginning (Including Sass) \ExternalLink}} \hfill \textit{Sep. 2020}}
        \resumeItemListEnd
 
 %--------PROGRAMMING SKILLS------------
@@ -209,7 +240,7 @@
         \resumeItemUpdated
           {\textbf{Frameworks and Libraries}{: Node.js, React.js, Redux, Express.js, Mongoose, Bootstrap, Jest, JUnit }}
         \resumeItemUpdated
-          {\textbf{Technologies and Tools}{: Git, Unix/Linux, MongoDB, NoSQL, Bash, Heroku}}
+          {\textbf{Technologies and Tools}{: Git, Unix/Linux, MongoDB, NoSQL, Bash, Heroku, Render}}
    \resumeItemListEnd
 
 
